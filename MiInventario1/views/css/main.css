@@ -1,0 +1,185 @@
+/* Mejoras generales para el dashboard */
+body {
+    background-color: #f7f9fc;
+}
+
+/* Estilos del logo (corregidos y con !important para mayor prioridad) */
+.navbar-logo {
+    height: 40px !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
+
+/* Mejoras para el carrusel */
+.carousel {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Tarjetas de productos */
+.card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Acordeón mejorado */
+.accordion-button:not(.collapsed) {
+    background-color: rgba(76, 161, 175, 0.1);
+    color: #2c3e50;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(76, 161, 175, 0.25);
+}
+
+/* Mejoras para el footer */
+.footer {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 3rem 0 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Botones mejorados */
+.btn-primary {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #1e2b37, #3a8394);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Animaciones sutiles */
+.nav-link, .social-icons a, .btn {
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    color: #4ca1af !important;
+}
+/* Estilos específicos para login.php */
+
+
+/* Layout para la página de login */
+.login-container,
+.registro-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 400px;
+    flex: 1; /* Asegura que ambos contenedores tengan el mismo tamaño */
+}
+
+/* Contenedor principal que envuelve los formularios */
+.form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem; /* Espacio entre los contenedores */
+    max-width: 900px; /* Ajusta según sea necesario */
+    margin: 0 auto;
+}
+
+/* Aplicamos las mismas propiedades de las cards pero con clases específicas */
+.login-container,
+.registro-container {
+    transition: inherit;
+    border: none;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.login-container:hover,
+.registro-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+/* Títulos de formularios */
+.login-container h2,
+.registro-container h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(76, 161, 175, 0.2);
+    padding-bottom: 0.5rem;
+}
+
+/* Estructura de formularios */
+.login-container form,
+.registro-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para los campos de formulario */
+.login-container input,
+.registro-container input,
+.registro-container select {
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.login-container input:focus,
+.registro-container input:focus,
+.registro-container select:focus {
+    outline: none;
+    border-color: #4ca1af;
+    box-shadow: 0 0 0 0.25rem rgba(76, 161, 175, 0.25);
+}
+
+/* Botones de formulario - adaptando estilo de btn-primary */
+.login-container button,
+.registro-container button {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.login-container button:hover,
+.registro-container button:hover {
+    background: linear-gradient(135deg, #1e2b37, #3a8394);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .form-wrapper {
+        flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
+    }
+
+    .login-container,
+    .registro-container {
+        margin: 1rem auto; /* Centra los contenedores en pantallas pequeñas */
+    }
+}
